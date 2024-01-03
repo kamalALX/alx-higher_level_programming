@@ -1,75 +1,34 @@
 #include "lists.h"
 
 /**
-* insert_nodeint_at_index - a function that inserts a new node
-* at a given position.
-* @head: pointer to a pointer to the list.
-* @idx: the index of the list where the new node should be added.
-*	Index starts at 0.
-* @n: the value to be inserted in the new node.
+*  insert_node- a function that adds a new node at the beginning of
+*	listint_t list.
+* @head: Pointer a pointer to the list.
+* @number: an element of the linked list.
 *
-* Return: he address of the new node, or NULL if it failed.
+* Return: the address of the new element, or NULL if it failed
 */
 
-size_t listint_len(const listint_t *h);
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *newnode;
-	unsigned int i = 0;
-	listint_t *temp;
+	listint_t *node = *head, *new;
 
-	newnode = malloc(sizeof(listint_t));
-
-	if (newnode == NULL || i > listint_len(*head))
-	{
-		free(newnode);
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
 		return (NULL);
-	}
-	else
+	new->n = number;
+	if (node == NULL || node->n >= number)
 	{
-		temp = NULL;
-		while (head != NULL)
-		{
-			if (i == idx)
-			{
-				if (i == 0)
-				{
-					newnode->n = number;
-					newnode->next = *head;
-					*head = newnode;
-					return (newnode);
-				}
-				newnode->next = temp->next;
-				temp->next = newnode;
-				return (newnode);
-			}
-			else if (i + 1 == idx)
-			{
-				temp = *head;
-			}
-			head = &((*head)->next);
-			i++;
-		}
+		new->next = node;
+		*head = new;
+		return (new);
 	}
-	return (NULL);
-}
 
-/**
-* listint_len - a function that calculate the number of nodes in a list.
-* @h: pointer to the list
-*
-* Return: number of nodes.
-*/
+	while (node && node->next && node->next->n < number)
+		node = node->next;
 
-size_t listint_len(const listint_t *h)
-{
-		const listint_t *cursor = h;
-	size_t count = 0;
+	new->next = node->next;
+	node->next = new;
 
-	while (cursor != NULL)
-	{
-		count += 1;
-		cursor = cursor->next;
-	}
-	return (count);
+	return (new);
 }
