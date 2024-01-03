@@ -11,6 +11,7 @@
 * Return: he address of the new node, or NULL if it failed.
 */
 
+size_t listint_len(const listint_t *h);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 		listint_t *newnode;
