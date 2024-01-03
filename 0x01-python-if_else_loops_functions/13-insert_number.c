@@ -14,13 +14,13 @@
 size_t listint_len(const listint_t *h);
 listint_t *insert_node(listint_t **head, int number)
 {
-		listint_t *newnode;
+	listint_t *newnode;
 	unsigned int i = 0;
 	listint_t *temp;
 
 	newnode = malloc(sizeof(listint_t));
 
-	if (newnode == NULL || idx > listint_len(*head))
+	if (newnode == NULL || i > listint_len(*head))
 	{
 		free(newnode);
 		return (NULL);
@@ -34,7 +34,7 @@ listint_t *insert_node(listint_t **head, int number)
 			{
 				if (i == 0)
 				{
-					newnode->n = n;
+					newnode->n = number;
 					newnode->next = *head;
 					*head = newnode;
 					return (newnode);
