@@ -57,7 +57,6 @@ int is_palindrome(listint_t **head)
 		if (fast->n != slow->n)
 		{
 			return (0);
-			break;
 		}
 		fast = fast->next;
 		slow = slow->next;
