@@ -40,7 +40,7 @@ int is_palindrome(listint_t **head)
 	listint_t *midnode = NULL;
 
 	if (*head == NULL)
-		return (0);
+		return (1);
 	while (fast && fast->next)
 	{
 		fast = fast->next->next;
