@@ -14,13 +14,13 @@ def check_char(r):
         return 500
     elif r == 'M':
         return 1000
+
     return 0
-
-
 
 
 def roman_to_int(roman_string):
     intiger, i = 0, 0
+
     while i < len(roman_string):
         if i + 1 < len(roman_string):
             if roman_string[i] == 'I' and roman_string[i + 1] == 'V':
@@ -33,11 +33,10 @@ def roman_to_int(roman_string):
                 intiger += 40
                 i += 2
             elif roman_string[i] + roman_string[i] == 'CD':
-                intiger+= 400
+                intiger += 400
                 i += 2
         if i < len(roman_string):
             intiger += check_char(roman_string[i])
             i += 1
 
     return intiger
-
