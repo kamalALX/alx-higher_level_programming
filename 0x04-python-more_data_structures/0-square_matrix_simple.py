@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if not matrix:
-        return 0
     matrix_copy = list(map(list, matrix))
     j = 0
     i = 0
