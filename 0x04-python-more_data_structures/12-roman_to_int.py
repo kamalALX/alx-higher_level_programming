@@ -5,7 +5,7 @@ def check_char(r):
         if r == key:
             num = (rom_n[key])
             return num
-    return -1
+    return None
 
 
 def roman_to_int(roman_string):
