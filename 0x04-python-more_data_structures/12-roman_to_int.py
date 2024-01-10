@@ -11,7 +11,7 @@ def check_char(r):
 def roman_to_int(roman_string):
     intiger, i = 0, 0
 
-    if not roman_string or not isinstance(roman_string, str):
+    if not roman_string:
         return 0
 
     while i < len(roman_string):
