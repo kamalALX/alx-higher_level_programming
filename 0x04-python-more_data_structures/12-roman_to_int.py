@@ -15,7 +15,7 @@ def check_char(r):
     elif r == 'M':
         return 1000
 
-    return 0
+    return -1
 
 
 def roman_to_int(roman_string):
@@ -25,8 +25,6 @@ def roman_to_int(roman_string):
         return 0
 
     while i < len(roman_string):
-        if isinstance([i], str):
-            return 0
         if i + 1 < len(roman_string):
             if roman_string[i] == 'I' and roman_string[i + 1] == 'V':
                 intiger += 4
