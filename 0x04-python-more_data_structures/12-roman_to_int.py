@@ -1,20 +1,10 @@
 #!/usr/bin/python3
 def check_char(r):
-    if r == 'I':
-        return 1
-    elif r == 'V':
-        return 5
-    elif r == 'X':
-        return 10
-    elif r == 'L':
-        return 50
-    elif r == 'C':
-        return 100
-    elif r == 'D':
-        return 500
-    elif r == 'M':
-        return 1000
-
+    rom_n = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    for key in rom_n:
+        if r == key:
+            num = (rom_n[key])
+            return num
     return -1
 
 
