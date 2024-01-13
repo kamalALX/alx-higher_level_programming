@@ -1,5 +1,5 @@
+#include "/usr/include/python3.10/Python.h"
 #include <stdio.h>
-#include <Python.h>
 
 /**
  * display_python_bytes_info - Prints information about Python bytes objects
