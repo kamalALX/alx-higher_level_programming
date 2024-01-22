@@ -1,4 +1,5 @@
-#include <Python.h>
+#include "/usr/include/python3.10/Python.h"
+#include <stdio.h>
 
 void print_python_list(PyObject *p);
 void print_python_bytes(PyObject *p);
@@ -32,7 +33,7 @@ void print_python_list(PyObject *p)
 
 	for (index = 0; index < size; index++)
 	{
-		type = list->ob_item[i]->ob_type->tp_name;
+		type = list->ob_item[index]->ob_type->tp_name;
 		printf("Element %ld: %s\n", index, type);
 		if (strcmp(type, "bytes") == 0)
 			print_python_bytes(list->ob_item[index]);
