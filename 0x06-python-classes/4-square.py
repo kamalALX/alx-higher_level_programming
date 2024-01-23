@@ -11,11 +11,11 @@ class Square:
         Args:
             size (int): represents the size of the nez square
         """
-        self._size = size
+        self.__size = size
 
     @property
     def size(self):
-        return self._size
+        return self.size
 
     @size.setter
     def size(self, size):
@@ -23,7 +23,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        self._size = size
+        self.__size = size
 
     def area(self):
         """ returns the current square area """
