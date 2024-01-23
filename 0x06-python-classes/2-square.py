@@ -11,8 +11,8 @@ class Square:
         Args:
             size (int): represents the size of the nez square
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an intiger")
+        if isinstance(size, int) is not True:
+            raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
