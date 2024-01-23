@@ -32,11 +32,11 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if len(value) not 2 or value[0] < 0 or value[1] < 0
-        or not isinstance(value, tuple)
-        or not all(isinstance(num, int) for num in value):
+        if (len(value) != 2 or value[0] < 0 or value[1] < 0
+                or not isinstance(value, tuple)
+                or not all(isinstance(num, int) for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        slef.__position = position
+        self.__position = value
 
     def area(self):
         """ returns the current square area """
@@ -47,8 +47,8 @@ class Square:
             print("")
         else:
             for i in range(self.size):
+                for k in range(self.position[0]):
+                    print(" ", end="")
                 for j in range(self.size):
                     print("#", end="")
-                for k in range(self.position[0]):
-                    print(" "end="")
                 print()
