@@ -10,7 +10,7 @@ class Rectangle:
             print_symbol (any): used for string representation.
     """
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """ Initializes a new Rectangle.
@@ -23,7 +23,7 @@ class Rectangle:
         self.width = width
 
     @property
-    def width():
+    def width(self):
         return slef.__width
 
     @width.setter
@@ -35,7 +35,7 @@ class Rectangle:
         self.__width = width
 
     @property
-    def height():
+    def height(self):
         return self.__height
 
     @height.setter
@@ -72,8 +72,8 @@ class Rectangle:
         return st
 
     def __del__(self):
-        Rectangle.number_of_instances -= 1
         """ prints a string when a rectangle object is
             deleted.
         """
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
