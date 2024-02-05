@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """ a module that contain a class called BaseGeometry . """
 
-#!/usr/bin/python3
-""" class BaseGeometry """
-
 
 class BaseGeometry:
     """ a class BaseGeometry """
@@ -15,5 +12,5 @@ class BaseGeometry:
         """ a method that validates value """
         if type(value) != int:
             raise TypeError("{} must be an integer".formay(name))
-        elif value <= 0:
+        if value <= 0:
             raise ValueError"{} must be greater than 0".format(name))
