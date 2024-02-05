@@ -17,4 +17,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """ String representation of the class """
-        return ("[Square] " + str(self.size) + "/" + str(self.size))
+        return "[Square] " + str(self.__size) + "/" + str(self.__size)
