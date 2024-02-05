@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """ a module that contain a class called BaseGeometry . """
 
+#!/usr/bin/python3
+""" class BaseGeometry """
+
 
 class BaseGeometry:
     """ a class BaseGeometry """
