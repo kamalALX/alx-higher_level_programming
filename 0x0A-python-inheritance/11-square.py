@@ -50,6 +50,6 @@ class Square(Rectangle):
         """ returns the area of a square """
         return self.__size ** 2
 
-    def __print__(self):
+    def __str__(self):
         """ String representation of the class """
         return ("[Square] " + str(self.size) + "/" + str(self.size))
