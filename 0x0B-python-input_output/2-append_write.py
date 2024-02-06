@@ -2,7 +2,7 @@
 """ defiens a function that appends a text to a text file """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """ append 'text' to the end of 'filename'
         Return: the number of characters added.
     """
