@@ -4,7 +4,8 @@
 
 if __name__ == "__main__":
     import sys
-    from 5-save_to_json_file.py import save_to_json_file
+    import ('5-save_to_json_file').save_to_json_file
+    import ('6-load_from_json_file').load_from_json_file
 
     try:
         arg_list = load_from_json_file("add_item.json")
