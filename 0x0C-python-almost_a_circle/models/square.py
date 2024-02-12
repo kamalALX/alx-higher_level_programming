@@ -26,6 +26,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ this method assigns attributes """
         if args is not None and len(args) != 0:
             list1 = ['id', 'size', 'x', 'y']
             i = 0
