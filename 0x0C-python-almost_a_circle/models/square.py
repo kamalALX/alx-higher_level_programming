@@ -11,10 +11,12 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ String representation of the class rectangle """
-        return "[Square] (" + str(self.id) + ')' + ' ' +\
-            str(self.x) + '/' + str(self.y) + ' ' + '-' + ' ' +\
-            str(self.size)
+        """ str special method """
+        str_square = "[Square] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+        return str_square + str_id + str_xy + str_wh
 
     @property
     def size(self):
