@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This odule contains class Base """
+""" This module contains class Base """
 import json
 import csv
 import os.path
@@ -28,7 +28,7 @@ class Base:
     def save_to_file(cls, list_objs):
         """ Save object in a file """
         filename = "{}.json".format(cls.__name__)
-        list_dic = []
+        list_dic =[]
 
         if not list_objs:
             pass
