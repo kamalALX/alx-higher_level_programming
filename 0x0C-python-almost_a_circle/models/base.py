@@ -7,6 +7,7 @@ import os.path
 
 
 class Base:
+    """ class Base"""
     __nb__objects = 0
 
     def __init__(self, id=None):
