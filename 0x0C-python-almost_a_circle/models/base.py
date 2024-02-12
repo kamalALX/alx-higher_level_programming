@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
-""" """
+""" class Base"""
 import json
+import csv
+import os.path
 
 
 class Base:
