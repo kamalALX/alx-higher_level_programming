@@ -1,6 +1,6 @@
 #!/usr/bin/node
 exports.nbOccurences = function (list, searchElement) {
-	let occurence = 0;
+  let occurence = 0;
   list.map(myFunction);
   function myFunction (value) {
     if (value === searchElement) {
