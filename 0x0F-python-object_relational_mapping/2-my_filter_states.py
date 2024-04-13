@@ -11,7 +11,7 @@ if __name__ == "__name__":
     cur = db.cursor()
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cur.execute("""SELECT * FROM states
-                    WHERE name = %s ORDER BY id ASC""".format((sys.argv[4]).strip("'")))
+                    WHERE name LIKE BINARY '{}' ORDER BY id ASC""".format(sys.argv[4]).strip("'"))
     results = cur.fetchall()
     for row in results:
         print(row)
