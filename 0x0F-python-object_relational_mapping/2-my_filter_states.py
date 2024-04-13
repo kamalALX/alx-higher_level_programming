@@ -13,5 +13,4 @@ if __name__ == "__name__":
                 WHERE name LIKE BINARY '{}'
                 ORDER BY states.id ASC""".format(sys.argv[4]).strip("'"))
     results = cur.fetchall()
-    for row in results:
-        print(row)
+    [print(state) for state in cur.fetchall()]
