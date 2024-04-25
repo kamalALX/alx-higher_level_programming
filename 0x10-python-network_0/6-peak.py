@@ -5,6 +5,9 @@ def find_peak(list_of_integers):
     start = 0
     end = len(list_of_integers) - 1
 
+    if not list_of_integers:
+        return None
+
     while start < end:
         mid = (start + end) // 2
 
