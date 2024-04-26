@@ -3,15 +3,14 @@
 - sends a request to the URL
 - displays the body of the response (decoded in utf-8).
 """
-import urllib
-import sys
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
+    import sys
+    from urllib import request, error
 
     try:
-        with request.urlopen(url) as res:
+        with request.urlopen(sys.argv[1]) as res:
             print(res.read().decode('UTF-8'))
-    except urllib.error.HTTPError as e:
-        print('Error code:', e.code)
+    except error.HTTPError as er:
+        print('Error code:', er.code)
