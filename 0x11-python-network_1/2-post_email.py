@@ -8,6 +8,7 @@
 if __name__ == "__main__":
     import urllib.request
     import sys
+    import urllib.parse
 
     url = sys.argv[1]
     value = {"email": sys.srgv[2]}
