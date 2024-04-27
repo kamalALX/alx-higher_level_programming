@@ -8,10 +8,7 @@ import sys
 
 
 if __name__ == "__main__":
-    try:
-        letter = sys.argv[1]
-    except:
-        letter = ""
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
 
     r = requests.post("http://0.0.0.0:5000/search_user", data={'q': letter})
     try:
