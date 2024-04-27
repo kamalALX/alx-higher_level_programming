@@ -6,6 +6,7 @@ with the letter as a parameter.
 import requests
 import sys
 
+
 if __name__ == "__main__":
     try:
         letter = sys.argv[1]
