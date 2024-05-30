@@ -1,6 +1,6 @@
 #!/usr/bin/node
 $(document).ready(function() {
-  $('#add_item').click(function() {
-    $('.my_list').append('<li>Item</li>');
+ $('#red_header').click(function() {
+    $('header').addClass('red');
   });
 });
